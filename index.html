@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background:#000;
+            color: #fff;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: auto;
+        }
+        .left{
+            background:rgb(80, 78, 78);
+        }
+        .center{
+            background:rgb(114, 4, 4);
+        }
+        .right{
+            background:rgb(5, 100, 18);
+        }
+
+
+        .flex{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+        }
+        .flex .left{width: 200px}
+        .flex .center{width: 100%}
+        .flex .right{width: 200px}
+         
+         .float{clear: both}
+         .float .left{float:left;width: 200px}
+         .float .center{margin: 0 200px;}
+         .float .right{float:right;width: 200px}
+
+
+
+         .position{
+             position: relative;
+         }
+         .position .left{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 200px
+         }
+         .position .center{
+            margin:0 200px;
+         }
+         .position .right{
+            position: absolute;
+            right:0;
+            top:0;
+            width: 200px
+         }
+
+        /* 圣杯*/
+         .sb{ padding:  0 200px;}
+         .sb .center{
+            float: left;
+            width: 100%;
+         }
+         .sb .left{
+            width: 200px;
+            margin-left: -100%;
+            position: relative;
+            float: left;
+            left: -200px;
+         }
+         .sb .right{
+            width: 200px;
+            float: left;
+            margin-right: -100%;
+            position: relative;
+         }
+
+         /*双飞翼*/
+         .sfy{
+            height: 100px;
+            background: transparent;
+         }
+         .sfy .center-wrap{
+            float: left;
+            width: 100%;
+            background: transparent;
+         }
+         .sfy .center{
+            margin: 0 200px; /*留出距离*/
+         }
+         .sfy .left{
+            float: left;
+            width: 200px;
+            margin-left: -100%;
+         }  
+         .sfy .right{
+            float: left;
+            width: 200px;
+            margin-left: -200px;
+         }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <h1>grid</h1>
+    <div class="grid">
+        <div class="left">left</div>
+        <div class="center">center </div>
+        <div class="right">right</div>
+    </div>
+
+    
+    <h1>flex</h1>
+    <div class="flex">
+        <div class="left">left</div>
+        <div class="center">center </div>
+        <div class="right">right</div>
+    </div>
+
+
+    <h1>float</h1>
+    <div class="float">
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="center">center</div>
+    </div>
+
+    <h1>Position</h1>
+    <div class="position">
+        <div class="left">left</div>
+        <div class="center">center </div>
+        <div class="right">right</div>
+    </div>
+
+     <h1>圣杯</h1>
+    <div class="sb">
+         <div class="center">center</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+
+     <h1>双飞翼</h1>
+    <div class="sfy">
+        <div class="center-wrap">
+            <div class="center">center</div>
+        </div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    
+
+
+
+</body>
+</html>
